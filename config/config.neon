@@ -1,0 +1,37 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+parameters:
+  imageStorage:
+    thumbDir: '/media/images_thumbnails'
+    imageDir: '/media/images'
+    importImageDir: '/media/imported_images'
+    baseDir: %wwwDir%
+
+  selenium:
+    host: flame-cms.lc
+    browser: firefox
+    browserUrl: http://flame-cms.lc/
+    # port: 4444
+
+  theme:
+    baseDir: %wwwDir%
+    baseFolder: themes
+    default: default
+
+php:
+  date.timezone: Europe/Prague
+  zlib.output_compression: yes
+
+doctrine:
+  proxyDirs: %entities%
+  connection: %database%
+
+nette:
+  template:
+    helperLoaders: [\Flame\Templating\Helpers]
+    helpers:
+      thumb: @ThumbnailsCreator::thumb

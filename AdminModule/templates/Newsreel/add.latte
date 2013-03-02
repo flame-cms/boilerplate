@@ -1,0 +1,28 @@
+{var $title = 'Add new Newsreel'}
+
+{#head}
+<link rel="stylesheet" style="text/css" href="{$basePath}/css/datepicker.css" />
+
+<script type="text/javascript" src="{$basePath}/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="{$baseUrl}/tiny_mce/tiny_mce.js" ></script>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		$('.bootstrapDatePicker').datepicker();
+	});
+
+    tinyMCE.init({
+        mode: "specific_textareas",
+        editor_selector: "mceEditor",
+        theme_advanced_buttons1 : "formatselect,separator,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,separator,undo,redo,separator,link,unlink,image,removeformat,code",
+        plugins : 'inlinepopups',
+        relative_urls : false,
+        remove_script_host : false,
+        convert_urls : false
+    });
+</script>
+{/#}
+
+{block #content}
+    {control newsreelForm}
+{/block}

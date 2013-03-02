@@ -1,0 +1,48 @@
+services:
+	Authorizator: Flame\CMS\Security\Authorizator
+	Authenticator: Flame\CMS\Security\Authenticator
+	WordPressImporter: Flame\Addons\WordPress\PostsImporter
+	ThemeManager: Flame\CMS\Templating\ThemeManager(%theme%)
+	InFormFactory: Flame\CMS\FrontModule\Forms\Sign\InFormFactory
+	FileManager: \Flame\Tools\Files\FileManager(%imageStorage.baseDir%, %imageStorage.imageDir%)
+
+	NewsreelFacade: Flame\CMS\Models\Newsreel\NewsreelFacade
+	NewsreelControlFactory: Flame\CMS\Components\Newsreel\NewsreelControlFactory
+
+	UserFacade: Flame\CMS\Models\Users\UserFacade
+	UserEditFormFactory: Flame\CMS\AdminModule\Forms\Users\UserEditFormFactory
+	UserAddFormFactory: Flame\CMS\AdminModule\Forms\Users\UserAddFormFactory
+	UserPasswordFormFactory: Flame\CMS\AdminModule\Forms\Users\UserPasswordFormFactory
+
+	UserInfoFacade: Flame\CMS\Models\UsersInfo\UserInfoFacade
+
+	CommentFacade: Flame\CMS\Models\Comments\CommentFacade
+	CommentFormFactory: Flame\CMS\Components\Comments\CommentFormFactory
+	CommentControlFactory: Flame\CMS\Components\Comments\CommentControlFactory
+
+	CategoryFacade: Flame\CMS\Models\Categories\CategoryFacade
+	CategoryControlFactory: Flame\CMS\Components\Categories\CategoryControlFactory
+	CategoryFormProcces: \Flame\CMS\AdminModule\Forms\Categories\CategoryFormProcces
+
+	PostFacade: Flame\CMS\Models\Posts\PostFacade
+	PostFormFactory: \Flame\CMS\AdminModule\Forms\Posts\PostFormFactory
+
+	PageFacade: Flame\CMS\Models\Pages\PageFacade
+
+	ImageFacade: Flame\CMS\Models\Images\ImageFacade
+	ImageFormProcess: \Flame\CMS\AdminModule\Forms\Images\ImageFormProcess
+
+	MenuFacade: Flame\CMS\Models\Menu\MenuFacade
+	RawLinkFormFactory: Flame\CMS\AdminModule\Forms\Menu\RawLinkFormFactory
+	PageLinkFormFactory: Flame\CMS\AdminModule\Forms\Menu\PageLinkFormFactory
+
+	ImageCategoryFacade: \Flame\CMS\Models\ImageCategories\ImageCategoryFacade
+	ImageCategoryFormFactory: \Flame\CMS\AdminModule\Forms\ImageCategories\ImageCategoryFormFactory
+
+	ThumbnailsCreator: \Flame\Templating\Helpers\ThumbnailsCreator(%wwwDir%, %imageStorage.thumbDir%)
+
+
+
+
+
+

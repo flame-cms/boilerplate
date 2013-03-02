@@ -1,0 +1,48 @@
+{block #content}
+
+	<div class="left">
+		<h2 n:block="title">Pages</h2>
+	</div>
+	<div class="right">
+		<a class="btn btn-large btn-primary" n:href="add"><i class="icon-plus-sign icon-white"></i> Add new page</a>
+	</div>
+
+	<br class="clear" /> <hr />
+
+	{snippet #pages}
+		{if count($pages)}
+
+			<table class="table table-striped table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Content</th>
+						<th>Created</th>
+						<th>Views</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr n:foreach="$pages as $page">
+
+						<td>{$page->name}</td>
+						<td>{!$page->content|striptags|truncate:250}</td>
+						<td>{$page->created|date:'%d.%m.%y'}</td>
+						<td>{$page->hit}</td>
+						<td>
+                            <div class="btn-group">
+                                <a rel="tooltip" class="btn btn-small" n:href="edit $page->id"><i class="icon-edit"></i> Edit</a>
+                                <a rel="tooltip" class="btn btn-small btn-danger ajax" n:href="delete! $page->id"><i class="icon-trash icon-white"></i> Delete</a>
+                            </div>
+						</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+		{else}
+			<h4>None</h4>
+		{/if}
+	{/snippet}
+{/block}

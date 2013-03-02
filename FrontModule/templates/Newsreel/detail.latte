@@ -1,0 +1,7 @@
+{#content}
+
+	<h2  n:block="title">{$newsreel->title}</h2>
+
+	{!$newsreel->content}
+    <br />
+	<p>{$newsreel->date|date:'%d.%m.%y'} | {$newsreel->hit}</p>

@@ -1,0 +1,31 @@
+{#content}
+
+	<div class="left">
+		<h2 n:block="title">Images</h2>
+	</div>
+	<div class="right">
+		<a class="btn btn-large btn-primary" n:href="upload"><i class="icon-plus-sign icon-white"></i> Upload new images</a>
+	</div>
+
+	<br class="clear" /> <hr />
+
+	{snippet #images}
+
+        <div class="tabbable"> <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">In gallery</a></li>
+                <li><a href="#tab2" data-toggle="tab">Private</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+					{include 'images.latte' images => $publicImages}
+                </div>
+                <div class="tab-pane" id="tab2">
+					{include 'images.latte' images => $unPublicImages}
+                </div>
+            </div>
+        </div>
+
+	{/snippet}
+
+	<small>Your images are stored in folder <b>{$imageDir}</b></small>
