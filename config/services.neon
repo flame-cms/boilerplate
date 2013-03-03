@@ -20,13 +20,6 @@ services:
 	CommentFormFactory: Flame\CMS\Components\Comments\CommentFormFactory
 	CommentControlFactory: Flame\CMS\Components\Comments\CommentControlFactory
 
-	CategoryFacade: Flame\CMS\Models\Categories\CategoryFacade
-	CategoryControlFactory: Flame\CMS\Components\Categories\CategoryControlFactory
-	CategoryFormProcces: \Flame\CMS\AdminModule\Forms\Categories\CategoryFormProcces
-
-	PostFacade: Flame\CMS\Models\Posts\PostFacade
-	PostFormFactory: \Flame\CMS\AdminModule\Forms\Posts\PostFormFactory
-
 	PageFacade: Flame\CMS\Models\Pages\PageFacade
 
 	ImageFacade: Flame\CMS\Models\Images\ImageFacade

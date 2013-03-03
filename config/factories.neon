@@ -1,10 +1,5 @@
 factories:
 
-  categoryForm:
-    create: \Flame\CMS\AdminModule\Forms\Categories\CategoryForm(%categories%, %defaults%)
-    implement: \Flame\CMS\AdminModule\Forms\Categories\ICategoryFormFactory
-    parameters: [array categories, array defaults = []]
-
   lightGalleryControl:
     create: \Flame\Components\LightGallery\LightGalleryControl(%images%)
     implement: \Flame\Components\LightGallery\ILightGalleryControlFactory
@@ -14,10 +9,5 @@ factories:
     create: \Flame\CMS\AdminModule\Forms\Images\ImageForm(%categories%, %defaults%)
     implement: \Flame\CMS\AdminModule\Forms\Images\IImageFormFactory
     parameters: [array categories, array defaults = []]
-
-  postControl:
-    create: \Flame\CMS\Components\Posts\PostControl(%posts%)
-    implement: \Flame\CMS\Components\Posts\IPostControlFactory
-    parameters: [array posts]
 
 
